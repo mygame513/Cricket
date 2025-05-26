@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+</head>
+<body>
+    <form onsubmit="event.preventDefault(); redirectToGoogle();">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Username" required>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password" required><br>
+        </div>
+        <button type="submit">Log In</button>
+    </form>
+
+    <script>
+        function redirectToGoogle() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            
+            if (username && password) {
+                window.location.href = "pak.html";
+            } else {
+                alert("Please enter both username and password.");
+            }
+        }
+    </script>
+</body>
+</html>
